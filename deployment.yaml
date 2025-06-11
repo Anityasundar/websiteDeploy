@@ -1,0 +1,20 @@
+apiVersion: app/v1
+kind: deployment
+metadata:
+  name: resume-portfolio
+  namespace: nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: resume-portfolio
+  templates:
+    metadata:
+      labels:
+        app: resume-portfolio
+    spec:
+      containers:
+        - name: resume-portfolio
+          image: 
+          ports: 
+            - containerpors: 3000
